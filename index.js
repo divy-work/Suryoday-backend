@@ -62,6 +62,7 @@ app.get('/details', async (req, res) => {
     try {
         let details = await Detail.find();
         let formattedDetails = details.map((detail) => ({
+            _id: detail._id,
             name: detail.name,
             number: detail.number,
             email: detail.email,
