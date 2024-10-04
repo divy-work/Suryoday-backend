@@ -70,6 +70,7 @@ app.get('/details', async (req, res) => {
             email: detail.email,
             floor: detail.floor,
             portion: detail.portion,
+            dateAdded: detail.dateAdded
         }));
         res.send(formattedDetails);
     } catch (error) {
