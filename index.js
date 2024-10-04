@@ -33,6 +33,7 @@ app.get('/home', (req, res) => {
     res.send('API running');
 });
 
+//api to post the data into the database
 app.post('/details', async (req, res) => {
     try {
         console.log('Received request to add details');
@@ -42,7 +43,7 @@ app.post('/details', async (req, res) => {
             number: req.body.number,
             email: req.body.email,
             floor: req.body.floor,
-            portion: req.body.portion,
+            portion: req.body.portion
         });
 
         console.log('Detail object created, saving to database');
@@ -56,6 +57,7 @@ app.post('/details', async (req, res) => {
         res.status(500).send({ error: 'Failed to save detail' });
     }
 });
+
 
 // API to retrieve all the details from the DB
 app.get('/details', async (req, res) => {
