@@ -31,7 +31,7 @@ const customerSchema = new mongoose.Schema({
      // Add the dateAdded field to store IST time
      dateAdded: {
         type: String,
-        default: () => dayjs().tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss') // IST date-time
+        default: () => dayjs().tz('Asia/Kolkata').format('ddd MMM DD YYYY HH:mm:ss') // IST date-time
     }
 });
 
